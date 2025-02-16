@@ -21,8 +21,8 @@ export const GlobalSearch = () => {
   }, []);
 
   return isMounted ? (
-    <div className='flex bg-secondary-22 rounded-md h-12 py-2 px-5 relative'>
-      <div className='flex items-center'>
+    <div className='flex bg-secondary-22 rounded-md h-10 lg:h-12 py-2 px-5 relative'>
+      <div className='flex items-center text-sm lg:text-base'>
         <MdMyLocation />
       </div>
       <Dropdown
@@ -33,7 +33,7 @@ export const GlobalSearch = () => {
         pt={{
           root: { className: 'bg-transparent h-full shadow-none' },
           trigger: { className: 'hidden' },
-          input: { className: 'py-1 px-4 font-bold' }
+          input: { className: 'h-full py-1 lg:py-1.5 px-2 lg:px-4 font-bold text-xs lg:text-sm' }
         }}
       />
       <Divider
@@ -58,7 +58,12 @@ export const GlobalSearch = () => {
           }, 400);
         }}
         onChange={(e) => setSearchInput(e.target.value)}
-        pt={{ root: { className: 'bg-transparent h-full px-5 shadow-none text-sm w-[300px]' } }}
+        pt={{
+          root: {
+            className:
+              'bg-transparent h-full px-2 lg:px-5 shadow-none text-xs lg:text-sm w-[300px] w-full lg:w-auto'
+          }
+        }}
       />
       {focused && (
         <div
@@ -67,7 +72,10 @@ export const GlobalSearch = () => {
           }`}>
           {searchInput &&
             items.map((item) => (
-              <div key={item} className='p-2 hover:bg-primary-2/10 cursor-pointer'>
+              <div
+                onClick={() => setSearchInput(`شهر ${item}`)}
+                key={item}
+                className='p-2 hover:bg-primary-2/10 cursor-pointer'>
                 شهر {item}
               </div>
             ))}

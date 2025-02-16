@@ -1,9 +1,13 @@
-import Image from 'next/image';
+import Banner from '@/components/pages/Home/Banner';
+import LovelyCities from '@/components/pages/Home/LovelyCities';
+import SecondSection from '@/components/pages/Home/SecondSection';
 
 export default function Home() {
   return (
     <div>
-      <Image src='/images/homeBanner.jpg' alt='home banner' className='w-full' width={1440} height={820} />
+      <Banner />
+      <SecondSection />
+      <LovelyCities />
     </div>
   );
 }
