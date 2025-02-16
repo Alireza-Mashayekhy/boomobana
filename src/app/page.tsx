@@ -1,6 +1,7 @@
 import Banner from '@/components/pages/Home/Banner';
 import LovelyCities from '@/components/pages/Home/LovelyCities';
 import SecondSection from '@/components/pages/Home/SecondSection';
+import TopAgencies from '@/components/pages/Home/TopAgencies';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Banner />
       <SecondSection />
       <LovelyCities />
+      <TopAgencies />
     </div>
   );
 }
