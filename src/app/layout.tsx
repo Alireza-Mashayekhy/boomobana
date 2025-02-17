@@ -1,9 +1,10 @@
-import { Nav } from '@/components/atoms/Nav';
-import PrimeReactProvider from '@/providers/PrimeReactProvider';
 import '@/styles/globals.css';
 import '@/styles/fonts.css';
 
 import type { Metadata } from 'next';
+
+import { Nav } from '@/components/atoms/Nav';
+import PrimeReactProvider from '@/providers/PrimeReactProvider';
 
 export const metadata: Metadata = {
   title: 'بوم و بنا',
@@ -22,6 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <link rel='canonical' href='https://boomobana.com/' />
       <body>
         <PrimeReactProvider>
           <Nav />

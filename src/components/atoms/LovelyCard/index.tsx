@@ -1,7 +1,7 @@
 const LovelyCard = ({ image, name }: { image: string; name: string }) => {
   return (
     <div
-      className='aspect-square cursor-pointer rounded-3xl flex items-center justify-center overflow-hidden bg-no-repeat group'
+      className='aspect-[1.3] cursor-pointer rounded-2xl flex items-center justify-center overflow-hidden bg-no-repeat group'
       style={{
         background: `url(${image}) no-repeat`,
         backgroundSize: 'cover',

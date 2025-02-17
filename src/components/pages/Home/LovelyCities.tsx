@@ -23,10 +23,12 @@ const LovelyCities = () => {
   return (
     <div className='p-12'>
       <h2 className='text-3xl font-bold mb-10'>شهرهای محبوب و پربازدید</h2>
-      <div className='grid grid-cols-4 gap-6'>
-        {cities.map((city) => {
-          return <LovelyCard key={city.name} name={city.name} image={city.image} />;
-        })}
+      <div className='flex justify-center'>
+        <div className='grid grid-cols-4 gap-6 w-full max-w-[1400px]'>
+          {cities.map((city) => {
+            return <LovelyCard key={city.name} name={city.name} image={city.image} />;
+          })}
+        </div>
       </div>
     </div>
   );
