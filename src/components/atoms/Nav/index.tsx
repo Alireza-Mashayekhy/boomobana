@@ -14,7 +14,7 @@ export const Nav = () => {
         <Image src='/logo.svg' alt='Boomobana' width={50} height={100} className='w-8 lg:w-[50px]' />
         <GlobalSearch />
       </div>
-      <div className='hidden lg:flex items-center text-secondary-22 gap-4'>
+      <div className='hidden lg:flex items-center text-secondary-1 gap-4'>
         <Tooltip target='.blogIcon' position='bottom'>
           <Link href='/'>
             <FaBlog className='blogIcon text-xl' data-pr-tooltip='مقاله' />
