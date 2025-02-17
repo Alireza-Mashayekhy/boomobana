@@ -9,7 +9,7 @@ import { Tooltip } from '../Tooltip';
 
 export const Nav = () => {
   return (
-    <div className='fixed lg:top-5 lg:left-5 z-40 w-full lg:w-[calc(100vw-40px)] bg-secondary-22/50  backdrop-blur-lg lg:rounded-xl flex justify-between items-center py-2 px-5 shadow-xl lg:shadow-none'>
+    <div className='fixed lg:top-5 lg:left-1/2 lg:-translate-x-1/2 z-40 w-full lg:w-[calc(100vw-40px)] max-w-[1400px] bg-secondary-22/50  backdrop-blur-lg lg:rounded-xl flex justify-between items-center py-2 px-5 shadow-xl lg:shadow-none'>
       <div className='flex items-center justify-between gap-5 lg:gap-10 w-full lg:w-fit'>
         <Image src='/logo.svg' alt='Boomobana' width={50} height={100} className='w-8 lg:w-[50px]' />
         <GlobalSearch />
