@@ -119,7 +119,7 @@ export default function SecondSection() {
   return (
     <div className='p-12'>
       <Title title='سرویس های بوم و بنا' />
-      <Tabs tabs={tabItems} activeIndex={value} onChange={(index) => setValue(index)} />
+      <Tabs navClass='gap-20' tabs={tabItems} activeIndex={value} onChange={(index) => setValue(index)} />
     </div>
   );
 }

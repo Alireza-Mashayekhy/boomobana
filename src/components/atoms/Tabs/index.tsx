@@ -6,16 +6,17 @@ interface AccordionTypes {
   tabs: { label: string; children: JSX.Element }[];
   activeIndex?: number;
   onChange?: (index: number) => void;
+  navClass?: string;
 }
 
-const Tabs = ({ tabs, onChange, activeIndex }: AccordionTypes) => {
+const Tabs = ({ tabs, onChange, activeIndex, navClass }: AccordionTypes) => {
   return (
     <TabView
       onTabChange={(e) => onChange?.(e.index)}
       activeIndex={activeIndex}
       pt={{
         nav: {
-          className: '!bg-transparent justify-center gap-14'
+          className: `!bg-transparent justify-center ${navClass}`
         },
         panelContainer: {
           className: '!bg-transparent !p-0'

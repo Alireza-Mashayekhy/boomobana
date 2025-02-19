@@ -1,17 +1,62 @@
 'use client';
 
-import { TabPanel, TabPanelPassThroughMethodOptions, TabView } from 'primereact/tabview';
-import { classNames } from 'primereact/utils';
 import { useState } from 'react';
 
+import AdvCard from '@/components/atoms/AdvCard';
+import Tabs from '@/components/atoms/Tabs';
 import Title from '@/components/atoms/Title/indes';
 
 const Cards = () => {
   return (
-    <div className='grid grid-cols-3'>
-      <div>t</div>
-      <div>t</div>
-      <div>t</div>
+    <div className='grid grid-cols-3 gap-10 mt-7'>
+      <AdvCard
+        name='اجاره واحد های نوساز در فردیس کرج'
+        image='/images/homeBanner.jpg'
+        type='رهن اجاره'
+        size={5000}
+        rooms={4}
+        address='البرز-فردیس-کوچه تهرانسر...'
+        rent={10000000}
+        mortgage={200000000}
+        agency={{
+          image: '/images/homeBanner.jpg',
+          adviserImage: '/images/homeBanner.jpg',
+          name: 'آژانس آکو',
+          adviserName: 'مبینا دانه واش'
+        }}
+      />
+      <AdvCard
+        name='اجاره واحد های نوساز در فردیس کرج'
+        image='/images/homeBanner.jpg'
+        type='رهن اجاره'
+        size={5000}
+        rooms={4}
+        address='البرز-فردیس-کوچه تهرانسر...'
+        rent={10000000}
+        mortgage={200000000}
+        agency={{
+          image: '/images/homeBanner.jpg',
+          adviserImage: '/images/homeBanner.jpg',
+          name: 'آژانس آکو',
+          adviserName: 'مبینا دانه واش'
+        }}
+      />
+      <AdvCard
+        name='اجاره واحد های نوساز در فردیس کرج'
+        image='/images/homeBanner.jpg'
+        type='رهن اجاره'
+        size={5000}
+        rooms={4}
+        address='البرز-فردیس-کوچه تهرانسر...'
+        rent={10000000}
+        mortgage={200000000}
+        agency={{
+          image: '/images/homeBanner.jpg',
+          adviserImage: '/images/homeBanner.jpg',
+          name: 'آژانس آکو',
+          adviserName: 'مبینا دانه واش'
+        }}
+      />
     </div>
   );
 };
@@ -42,36 +87,7 @@ const NewestPosts = () => {
         title='جدید ترین آگهی ها'
         description='بهترین گزینه متناسب با نیاز و سلیقه شما ، تنها با چند کلیک در دسترس شماست'
       />
-      <TabView
-        onTabChange={(e) => setValue?.(e.index)}
-        activeIndex={value}
-        pt={{
-          nav: {
-            className: '!bg-transparent justify-center'
-          },
-          panelContainer: {
-            className: '!bg-transparent !p-0'
-          }
-        }}>
-        {tabItems.map((tab) => (
-          <TabPanel
-            pt={{
-              headerAction: (options: TabPanelPassThroughMethodOptions) => ({
-                className: classNames(
-                  'transition-colors bg-transparent duration-300 min-w-[100px] justify-center',
-                  {
-                    'text-black': value !== options.context?.index,
-                    'text-primary-1': value === options.context?.index
-                  }
-                )
-              })
-            }}
-            key={tab.label}
-            header={tab.label}>
-            {tab?.children}
-          </TabPanel>
-        ))}
-      </TabView>{' '}
+      <Tabs tabs={tabItems} activeIndex={value} onChange={(index) => setValue(index)} />
     </div>
   );
 };

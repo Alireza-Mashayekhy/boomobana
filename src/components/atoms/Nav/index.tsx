@@ -11,7 +11,7 @@ import { Tooltip } from '../Tooltip';
 
 export const Nav = () => {
   return (
-    <div className='fixed lg:top-0 lg:left-1/2 lg:-translate-x-1/2 z-40 w-full max-w-[1200px] bg-secondary-22/50  backdrop-blur-lg lg:rounded-b-xl grid grid-cols-3 items-center py-2 px-5 shadow-xl lg:shadow-none'>
+    <div className='fixed lg:top-0 lg:left-1/2 lg:-translate-x-1/2 z-40 w-full max-w-[1120px] bg-secondary-22/50  backdrop-blur-lg lg:rounded-b-xl grid grid-cols-3 items-center py-2 px-5 shadow-xl lg:shadow-none'>
       <div className='flex items-center justify-between gap-5 lg:gap-10 w-full lg:w-fit'>
         <Image src='/logo.svg' alt='Boomobana' width={50} height={100} className='w-8 lg:w-[50px]' />
       </div>
@@ -19,7 +19,7 @@ export const Nav = () => {
         <Tooltip target='.userIcon' position='bottom'>
           <div
             data-pr-tooltip='جستجو'
-            className='aspect-square cursor-pointer userIcon rounded-full bg-primary-2/80 text-white hover:bg-primary-1/80 transition-colors backdrop-blur-md w-10 h-10 flex items-center justify-center'>
+            className='aspect-square cursor-pointer userIcon rounded-full text-black border border-black transition-colors w-10 h-10 flex items-center justify-center'>
             <FaMagnifyingGlass className=' text-xl' />
           </div>
         </Tooltip>
@@ -27,7 +27,7 @@ export const Nav = () => {
           <Link
             href='/'
             data-pr-tooltip='مقاله'
-            className='aspect-square blogIcon rounded-full bg-primary-2/80 text-white hover:bg-primary-1/80 transition-colors backdrop-blur-md w-10 h-10 flex items-center justify-center'>
+            className='aspect-square blogIcon rounded-full text-black border border-black transition-colors w-10 h-10 flex items-center justify-center'>
             <RiBloggerLine className=' text-2xl' />
           </Link>
         </Tooltip>
@@ -35,7 +35,7 @@ export const Nav = () => {
           <Link
             href='/'
             data-pr-tooltip='ذخیره شده ها'
-            className='aspect-square bookmarkIcon rounded-full bg-primary-2/80 text-white hover:bg-primary-1/80 transition-colors backdrop-blur-md w-10 h-10 flex items-center justify-center'>
+            className='aspect-square bookmarkIcon rounded-full text-black border border-black transition-colors w-10 h-10 flex items-center justify-center'>
             <FaRegBookmark className=' text-xl' />
           </Link>
         </Tooltip>
@@ -43,7 +43,7 @@ export const Nav = () => {
           <Link
             href='/'
             data-pr-tooltip='اعلان ها'
-            className='aspect-square notificationIcon rounded-full bg-primary-2/80 text-white hover:bg-primary-1/80 transition-colors backdrop-blur-md w-10 h-10 flex items-center justify-center'>
+            className='aspect-square notificationIcon rounded-full text-black border border-black transition-colors w-10 h-10 flex items-center justify-center'>
             <MdNotificationsNone className=' text-2xl' />
           </Link>
         </Tooltip>
@@ -51,7 +51,7 @@ export const Nav = () => {
           <Link
             href='/'
             data-pr-tooltip='چت'
-            className='aspect-square chatBoxIcon rounded-full bg-primary-2/80 text-white hover:bg-primary-1/80 transition-colors backdrop-blur-md w-10 h-10 flex items-center justify-center'>
+            className='aspect-square chatBoxIcon rounded-full text-black border border-black transition-colors w-10 h-10 flex items-center justify-center'>
             <PiChatsBold className=' text-2xl' />
           </Link>
         </Tooltip>
@@ -59,7 +59,7 @@ export const Nav = () => {
           <Link
             href='/'
             data-pr-tooltip='پنل کاربری'
-            className='aspect-square userIcon rounded-full bg-primary-2/80 text-white hover:bg-primary-1/80 transition-colors backdrop-blur-md w-10 h-10 flex items-center justify-center'>
+            className='aspect-square userIcon rounded-full text-black border border-black transition-colors w-10 h-10 flex items-center justify-center'>
             <FaRegUser className=' text-xl' />
           </Link>
         </Tooltip>

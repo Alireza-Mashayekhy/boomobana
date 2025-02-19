@@ -4,7 +4,7 @@ import { GlobalSearch } from '@/components/atoms/GlobalSearch';
 
 export default function Banner() {
   return (
-    <div className='h-[calc(100vh-150px)] rounded-xl min-h-[555px] overflow-hidden relative'>
+    <div className='h-screen min-h-[555px] overflow-hidden relative'>
       <Image
         src='/images/homeBanner.jpg'
         alt='home banner'
