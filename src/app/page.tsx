@@ -1,4 +1,5 @@
 import Banner from '@/components/pages/Home/Banner';
+import Blogs from '@/components/pages/Home/blogs';
 import Income from '@/components/pages/Home/Income';
 import JoinUs from '@/components/pages/Home/JoinUs';
 import LovelyCities from '@/components/pages/Home/LovelyCities';
@@ -16,6 +17,7 @@ export default function Home() {
       <JoinUs />
       <NewestPosts />
       <Income />
+      <Blogs />
     </div>
   );
 }

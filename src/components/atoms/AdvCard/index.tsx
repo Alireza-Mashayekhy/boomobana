@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import { Avatar } from 'primereact/avatar';
 import { Divider } from 'primereact/divider';
-import { FaBed, FaHome } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaBed, FaHome, FaRegBookmark } from 'react-icons/fa';
 import { ImLocation2 } from 'react-icons/im';
+import { IoMdBookmark } from 'react-icons/io';
 import { MdPhoneForwarded } from 'react-icons/md';
 import { RiCustomSize } from 'react-icons/ri';
 import { TbHomeDollar } from 'react-icons/tb';
@@ -26,6 +28,7 @@ interface PropsTypes {
 }
 
 const AdvCard = (props: PropsTypes) => {
+  const [saved, setSaved] = useState(false);
   return (
     <div className='bg-secondary-22 shadow-md rounded-2xl p-2 flex flex-col gap-4'>
       <div className='relative overflow-hidden rounded-xl aspect-[1.5]'>
@@ -37,8 +40,13 @@ const AdvCard = (props: PropsTypes) => {
           width={300}
           height={200}
         />
-        <div className='absolute w-full bottom-0 left-0 p-1.5 bg-secondary-3/70 text-secondary-22 text-xs'>
+        <div className='absolute w-full bottom-0 left-0 p-2 bg-secondary-3/70 text-secondary-22 text-xs'>
           {props.name}
+        </div>
+        <div
+          onClick={() => setSaved((prev) => !prev)}
+          className='absolute cursor-pointer top-3 right-3 rounded-lg text-white bg-secondary-1/50 w-8 h-8 flex items-center justify-center '>
+          {saved ? <IoMdBookmark className='text-xl' /> : <FaRegBookmark />}
         </div>
       </div>
       <div className='flex flex-col gap-4 px-2 text-secondary-1'>
