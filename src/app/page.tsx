@@ -1,5 +1,6 @@
 import Banner from '@/components/pages/Home/Banner';
 import Blogs from '@/components/pages/Home/blogs';
+import Categories from '@/components/pages/Home/Categories';
 import FreeAdv from '@/components/pages/Home/FreeAdv';
 import Income from '@/components/pages/Home/Income';
 import JoinUs from '@/components/pages/Home/JoinUs';
@@ -20,6 +21,7 @@ export default function Home() {
       <Income />
       <Blogs />
       <FreeAdv />
+      <Categories />
     </div>
   );
 }
