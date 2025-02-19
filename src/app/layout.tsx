@@ -27,9 +27,9 @@ export default function RootLayout({
       <body>
         <PrimeReactProvider>
           <div className='flex justify-center'>
-            <div className='w-full max-w-[1480px] relative'>
+            <div className='w-full max-w-[1200px] relative'>
               <Nav />
-              {children}
+              <div className='lg:pt-28'>{children}</div>
             </div>
           </div>
         </PrimeReactProvider>

@@ -15,7 +15,7 @@ const Tabs = ({ tabs, onChange, activeIndex }: AccordionTypes) => {
       activeIndex={activeIndex}
       pt={{
         nav: {
-          className: '!bg-transparent justify-center'
+          className: '!bg-transparent justify-center gap-14'
         },
         panelContainer: {
           className: '!bg-transparent !p-0'
@@ -25,9 +25,18 @@ const Tabs = ({ tabs, onChange, activeIndex }: AccordionTypes) => {
         <TabPanel
           pt={{
             headerAction: (options: TabPanelPassThroughMethodOptions) => ({
-              className: classNames('transition-colors  duration-300 min-w-[100px] justify-center', {
-                'bg-transparent text-black': activeIndex !== options.context?.index,
-                'bg-primary-2/70 text-white': activeIndex === options.context?.index
+              className: classNames(
+                'transition-colors bg-transparent duration-300 min-w-[100px] justify-center ',
+                {
+                  'text-black': activeIndex !== options.context?.index,
+                  'text-primary-1': activeIndex === options.context?.index
+                }
+              )
+            }),
+            header: (options: TabPanelPassThroughMethodOptions) => ({
+              className: classNames(' border-primary-1 transition-all', {
+                'border-b-0': activeIndex !== options.context?.index,
+                'border-b-2': activeIndex === options.context?.index
               })
             })
           }}
