@@ -3,6 +3,7 @@ import '@/styles/fonts.css';
 
 import type { Metadata } from 'next';
 
+import Footer from '@/components/atoms/Footer';
 import { Nav } from '@/components/atoms/Nav';
 import PrimeReactProvider from '@/providers/PrimeReactProvider';
 
@@ -30,6 +31,7 @@ export default function RootLayout({
             <div className='w-full max-w-[1200px] relative'>
               <Nav />
               <div>{children}</div>
+              <Footer />
             </div>
           </div>
         </PrimeReactProvider>
