@@ -4,6 +4,8 @@ import { TabPanel, TabPanelPassThroughMethodOptions, TabView } from 'primereact/
 import { classNames } from 'primereact/utils';
 import { useState } from 'react';
 
+import Title from '@/components/atoms/Title/indes';
+
 const Cards = () => {
   return (
     <div className='grid grid-cols-3'>
@@ -36,10 +38,10 @@ const NewestPosts = () => {
   ];
   return (
     <div className='p-12 pt-20'>
-      <h2 className='text-3xl font-bold mb-10 text-center'>جدید ترین آگهی ها </h2>
-      <p className='text-xl mb-10 text-center'>
-        بهترین گزینه متناسب با نیاز و سلیقه شما ، تنها با چند کلیک در دسترس شماست
-      </p>
+      <Title
+        title='جدید ترین آگهی ها'
+        description='بهترین گزینه متناسب با نیاز و سلیقه شما ، تنها با چند کلیک در دسترس شماست'
+      />
       <TabView
         onTabChange={(e) => setValue?.(e.index)}
         activeIndex={value}

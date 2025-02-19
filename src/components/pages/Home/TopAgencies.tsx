@@ -5,15 +5,18 @@ import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import Title from '@/components/atoms/Title/indes';
 import TopAgencyCard from '@/components/atoms/TopAgencyCard';
 
 const TopAgencies = () => {
   const agencies = [...Array.from({ length: 20 })];
 
   return (
-    <div className='py-12'>
-      <h2 className='text-3xl font-bold mb-10 text-center'>آژانس های املاک برتر </h2>
-      <p className='text-xl mb-10 text-center'>برترین آژانس های املاک بر اساس تجربه و نظرات کاربران</p>
+    <div className='p-12'>
+      <Title
+        title='آژانس های املاک برتر'
+        description='برترین آژانس های املاک بر اساس تجربه و نظرات کاربران'
+      />
       <Swiper
         slidesPerView='auto'
         spaceBetween={14}

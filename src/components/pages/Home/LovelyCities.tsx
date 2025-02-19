@@ -1,4 +1,5 @@
 import LovelyCard from '@/components/atoms/LovelyCard';
+import Title from '@/components/atoms/Title/indes';
 
 const LovelyCities = () => {
   const cities = [
@@ -22,7 +23,7 @@ const LovelyCities = () => {
 
   return (
     <div className='p-12'>
-      <h2 className='text-3xl font-bold mb-10'>شهرهای محبوب و پربازدید</h2>
+      <Title title='شهرهای محبوب و پربازدید' />
       <div className='flex justify-center'>
         <div className='grid grid-cols-4 gap-6 w-full max-w-[1400px]'>
           {cities.map((city) => {

@@ -1,17 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { HiOutlineUserGroup } from 'react-icons/hi';
+import { IoSettingsOutline } from 'react-icons/io5';
+import { LuUserPen } from 'react-icons/lu';
+import { MdOutlineEditNote } from 'react-icons/md';
+import { PiBooksLight, PiChartLineUp } from 'react-icons/pi';
+import { SlOrganization } from 'react-icons/sl';
 
 import Tabs from '@/components/atoms/Tabs';
+import Title from '@/components/atoms/Title/indes';
 
-const Items = ({ items }: { items: string[] }) => {
+const Items = ({ items }: { items: { name: string; icon: React.ReactElement }[] }) => {
   return (
     <div className='flex justify-center'>
       <div className='flex items-center gap-x-20 gap-y-5 justify-center flex-wrap max-w-[900px]  rounded-md py-5 px-10 backdrop-blur-sm'>
         {items.map((item, index) => {
           return (
-            <div className='text-lg text-secondary-1' key={`item-${item}-${index}`}>
-              {item}
+            <div
+              className='text-lg text-secondary-1 flex flex-col items-center gap-2'
+              key={`item-${item}-${index}`}>
+              <div className='text-3xl'>{item.icon}</div>
+              {item.name}
             </div>
           );
         })}
@@ -29,13 +39,13 @@ export default function SecondSection() {
       children: (
         <Items
           items={[
-            'تعریف شعبه ',
-            'مدیریت قراردادها',
-            'افزرایش سرعت و کارآمدی',
-            'داشبرد حرفه ای ',
-            'مدیریت مشتریان',
-            'مدیریت مشاورین ',
-            'دسته بندی فایل ها '
+            { icon: <MdOutlineEditNote />, name: 'تعریف شعبه ' },
+            { icon: <PiChartLineUp />, name: 'مدیریت قراردادها' },
+            { icon: <IoSettingsOutline />, name: 'افزرایش سرعت و کارآمدی' },
+            { icon: <SlOrganization />, name: 'داشبرد حرفه ای ' },
+            { icon: <HiOutlineUserGroup />, name: 'مدیریت مشتریان' },
+            { icon: <LuUserPen />, name: 'مدیریت مشاورین ' },
+            { icon: <PiBooksLight />, name: 'دسته بندی فایل ها ' }
           ]}
         />
       )
@@ -45,13 +55,13 @@ export default function SecondSection() {
       children: (
         <Items
           items={[
-            'تعریف شعبه ',
-            'مدیریت قراردادها',
-            'افزرایش سرعت و کارآمدی',
-            'داشبرد حرفه ای ',
-            'مدیریت مشتریان',
-            'مدیریت مشاورین ',
-            'دسته بندی فایل ها '
+            { icon: <MdOutlineEditNote />, name: 'تعریف شعبه ' },
+            { icon: <PiChartLineUp />, name: 'مدیریت قراردادها' },
+            { icon: <IoSettingsOutline />, name: 'افزرایش سرعت و کارآمدی' },
+            { icon: <SlOrganization />, name: 'داشبرد حرفه ای ' },
+            { icon: <HiOutlineUserGroup />, name: 'مدیریت مشتریان' },
+            { icon: <LuUserPen />, name: 'مدیریت مشاورین ' },
+            { icon: <PiBooksLight />, name: 'دسته بندی فایل ها ' }
           ]}
         />
       )
@@ -61,13 +71,13 @@ export default function SecondSection() {
       children: (
         <Items
           items={[
-            'تعریف شعبه ',
-            'مدیریت قراردادها',
-            'افزرایش سرعت و کارآمدی',
-            'داشبرد حرفه ای ',
-            'مدیریت مشتریان',
-            'مدیریت مشاورین ',
-            'دسته بندی فایل ها '
+            { icon: <MdOutlineEditNote />, name: 'تعریف شعبه ' },
+            { icon: <PiChartLineUp />, name: 'مدیریت قراردادها' },
+            { icon: <IoSettingsOutline />, name: 'افزرایش سرعت و کارآمدی' },
+            { icon: <SlOrganization />, name: 'داشبرد حرفه ای ' },
+            { icon: <HiOutlineUserGroup />, name: 'مدیریت مشتریان' },
+            { icon: <LuUserPen />, name: 'مدیریت مشاورین ' },
+            { icon: <PiBooksLight />, name: 'دسته بندی فایل ها ' }
           ]}
         />
       )
@@ -77,13 +87,13 @@ export default function SecondSection() {
       children: (
         <Items
           items={[
-            'تعریف شعبه ',
-            'مدیریت قراردادها',
-            'افزرایش سرعت و کارآمدی',
-            'داشبرد حرفه ای ',
-            'مدیریت مشتریان',
-            'مدیریت مشاورین ',
-            'دسته بندی فایل ها '
+            { icon: <MdOutlineEditNote />, name: 'تعریف شعبه ' },
+            { icon: <PiChartLineUp />, name: 'مدیریت قراردادها' },
+            { icon: <IoSettingsOutline />, name: 'افزرایش سرعت و کارآمدی' },
+            { icon: <SlOrganization />, name: 'داشبرد حرفه ای ' },
+            { icon: <HiOutlineUserGroup />, name: 'مدیریت مشتریان' },
+            { icon: <LuUserPen />, name: 'مدیریت مشاورین ' },
+            { icon: <PiBooksLight />, name: 'دسته بندی فایل ها ' }
           ]}
         />
       )
@@ -93,13 +103,13 @@ export default function SecondSection() {
       children: (
         <Items
           items={[
-            'تعریف شعبه ',
-            'مدیریت قراردادها',
-            'افزرایش سرعت و کارآمدی',
-            'داشبرد حرفه ای ',
-            'مدیریت مشتریان',
-            'مدیریت مشاورین ',
-            'دسته بندی فایل ها '
+            { icon: <MdOutlineEditNote />, name: 'تعریف شعبه ' },
+            { icon: <PiChartLineUp />, name: 'مدیریت قراردادها' },
+            { icon: <IoSettingsOutline />, name: 'افزرایش سرعت و کارآمدی' },
+            { icon: <SlOrganization />, name: 'داشبرد حرفه ای ' },
+            { icon: <HiOutlineUserGroup />, name: 'مدیریت مشتریان' },
+            { icon: <LuUserPen />, name: 'مدیریت مشاورین ' },
+            { icon: <PiBooksLight />, name: 'دسته بندی فایل ها ' }
           ]}
         />
       )
@@ -108,7 +118,7 @@ export default function SecondSection() {
 
   return (
     <div className='p-12'>
-      <h2 className='text-3xl font-bold mb-10'>سرویس های بوم و بنا</h2>
+      <Title title='سرویس های بوم و بنا' />
       <Tabs tabs={tabItems} activeIndex={value} onChange={(index) => setValue(index)} />
     </div>
   );
