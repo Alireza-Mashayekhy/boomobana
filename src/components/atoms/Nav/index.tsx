@@ -11,7 +11,7 @@ import { Tooltip } from '../Tooltip';
 
 export const Nav = () => {
   return (
-    <div className='fixed lg:top-0 lg:left-1/2 lg:-translate-x-1/2 z-40 w-full max-w-[1120px] bg-secondary-22/50  backdrop-blur-lg lg:rounded-b-xl grid grid-cols-3 items-center py-2 px-5 shadow-xl lg:shadow-none'>
+    <div className='absolute lg:top-0 lg:left-1/2 lg:-translate-x-1/2 z-40 w-full max-w-[1120px] bg-secondary-22/50  backdrop-blur-lg lg:rounded-b-xl grid grid-cols-3 items-center py-2 px-5 shadow-xl lg:shadow-none'>
       <div className='flex items-center justify-between gap-5 lg:gap-10 w-full lg:w-fit'>
         <Image src='/logo.svg' alt='Boomobana' width={50} height={100} className='w-8 lg:w-[50px]' />
       </div>
