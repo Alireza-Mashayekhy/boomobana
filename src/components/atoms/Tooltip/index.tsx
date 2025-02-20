@@ -4,7 +4,9 @@ export const Tooltip = ({ children, ...props }: TooltipProps & { children: React
   return (
     <>
       <PTooltip
-        pt={{ text: { className: 'bg-secondary-20/50 backdrop-blur-lg text-secondary-1 font-bold py-1' } }}
+        pt={{
+          text: { className: 'bg-secondary-20/50 backdrop-blur-lg text-secondary-1 py-1 text-xs' }
+        }}
         {...props}
       />
       {children}

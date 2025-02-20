@@ -1,33 +1,121 @@
 'use client';
 
 import React, { useState } from 'react';
-import { HiOutlineUserGroup } from 'react-icons/hi';
-import { IoSettingsOutline } from 'react-icons/io5';
-import { LuUserPen } from 'react-icons/lu';
-import { MdOutlineEditNote } from 'react-icons/md';
-import { PiBooksLight, PiChartLineUp } from 'react-icons/pi';
-import { SlOrganization } from 'react-icons/sl';
+import {
+  FcAddressBook,
+  FcBullish,
+  FcCollaboration,
+  FcComboChart,
+  FcConferenceCall,
+  FcCurrencyExchange,
+  FcDebt,
+  FcDiploma2,
+  FcEditImage,
+  FcElectroDevices,
+  FcFaq,
+  FcFlowChart,
+  FcGraduationCap,
+  FcHome,
+  FcMoneyTransfer,
+  FcNews,
+  FcOrgUnit,
+  FcOvertime,
+  FcPlus,
+  FcReadingEbook,
+  FcRules,
+  FcSalesPerformance,
+  FcSearch,
+  FcServices,
+  FcStatistics,
+  FcVip,
+  FcVoicePresentation,
+  FcWikipedia
+} from 'react-icons/fc';
 
 import Tabs from '@/components/atoms/Tabs';
 import Title from '@/components/atoms/Title/indes';
 
 const Items = ({ items }: { items: { name: string; icon: React.ReactElement }[] }) => {
-  return (
-    <div className='flex justify-center'>
-      <div className='flex items-center gap-x-20 gap-y-5 justify-center flex-wrap max-w-[900px]  rounded-md py-5 px-10 backdrop-blur-sm'>
-        {items.map((item, index) => {
-          return (
-            <div
-              className='text-lg text-secondary-1 flex flex-col items-center gap-2'
-              key={`item-${item}-${index}`}>
-              <div className='text-3xl'>{item.icon}</div>
-              {item.name}
-            </div>
-          );
-        })}
+  if (items.length === 7) {
+    return (
+      <div className='flex justify-center pt-10'>
+        <div className='flex flex-col items-center gap-y-5 justify-center py-5 px-10'>
+          <div className='grid grid-cols-4 gap-10'>
+            {items.slice(0, 4).map((item, index) => {
+              return (
+                <div
+                  key={`item-${index}`}
+                  className='text-lg text-secondary-1 flex flex-col items-center gap-2'>
+                  <div className='text-3xl'>{item.icon}</div>
+                  {item.name}
+                </div>
+              );
+            })}
+          </div>
+          <div className='grid grid-cols-3 gap-10'>
+            {items.slice(4, 8).map((item, index) => {
+              return (
+                <div
+                  key={`item-${index}`}
+                  className='text-lg text-secondary-1 flex flex-col items-center gap-2'>
+                  <div className='text-3xl'>{item.icon}</div>
+                  {item.name}
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else if (items.length === 6) {
+    return (
+      <div className='flex justify-center pt-10'>
+        <div className='grid grid-cols-3 gap-x-10 gap-y-5'>
+          {items.map((item, index) => {
+            return (
+              <div
+                key={`item-${index}`}
+                className='text-lg text-secondary-1 flex flex-col items-center gap-2'>
+                <div className='text-3xl'>{item.icon}</div>
+                {item.name}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  } else if (items.length === 5) {
+    return (
+      <div className='flex justify-center pt-10'>
+        <div className='flex flex-col items-center gap-y-5 justify-center py-5 px-10'>
+          <div className='grid grid-cols-3 gap-10'>
+            {items.slice(0, 3).map((item, index) => {
+              return (
+                <div
+                  key={`item-${index}`}
+                  className='text-lg text-secondary-1 flex flex-col items-center gap-2'>
+                  <div className='text-3xl'>{item.icon}</div>
+                  {item.name}
+                </div>
+              );
+            })}
+          </div>
+          <div className='grid grid-cols-2 gap-10'>
+            {items.slice(3, 8).map((item, index) => {
+              return (
+                <div
+                  key={`item-${index}`}
+                  className='text-lg text-secondary-1 flex flex-col items-center gap-2'>
+                  <div className='text-3xl'>{item.icon}</div>
+                  {item.name}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  }
 };
 
 export default function SecondSection() {
@@ -39,13 +127,13 @@ export default function SecondSection() {
       children: (
         <Items
           items={[
-            { icon: <MdOutlineEditNote />, name: 'تعریف شعبه ' },
-            { icon: <PiChartLineUp />, name: 'مدیریت قراردادها' },
-            { icon: <IoSettingsOutline />, name: 'افزرایش سرعت و کارآمدی' },
-            { icon: <SlOrganization />, name: 'داشبرد حرفه ای ' },
-            { icon: <HiOutlineUserGroup />, name: 'مدیریت مشتریان' },
-            { icon: <LuUserPen />, name: 'مدیریت مشاورین ' },
-            { icon: <PiBooksLight />, name: 'دسته بندی فایل ها ' }
+            { icon: <FcFlowChart />, name: 'تعریف شعبه ' },
+            { icon: <FcNews />, name: 'مدیریت قراردادها' },
+            { icon: <FcBullish />, name: 'افزایش سرعت و کارآمدی' },
+            { icon: <FcServices />, name: 'داشبرد حرفه ای ' },
+            { icon: <FcReadingEbook />, name: 'مدیریت مشتریان' },
+            { icon: <FcDebt />, name: 'مدیریت مشاورین ' },
+            { icon: <FcRules />, name: 'دسته بندی فایل ها ' }
           ]}
         />
       )
@@ -55,13 +143,11 @@ export default function SecondSection() {
       children: (
         <Items
           items={[
-            { icon: <MdOutlineEditNote />, name: 'تعریف شعبه ' },
-            { icon: <PiChartLineUp />, name: 'مدیریت قراردادها' },
-            { icon: <IoSettingsOutline />, name: 'افزرایش سرعت و کارآمدی' },
-            { icon: <SlOrganization />, name: 'داشبرد حرفه ای ' },
-            { icon: <HiOutlineUserGroup />, name: 'مدیریت مشتریان' },
-            { icon: <LuUserPen />, name: 'مدیریت مشاورین ' },
-            { icon: <PiBooksLight />, name: 'دسته بندی فایل ها ' }
+            { icon: <FcDiploma2 />, name: 'ساخت رزومه ' },
+            { icon: <FcCollaboration />, name: 'درخواست همکاری' },
+            { icon: <FcComboChart />, name: 'فروش و بازار سازی' },
+            { icon: <FcConferenceCall />, name: 'بسته اشتراکی ' },
+            { icon: <FcGraduationCap />, name: 'آموزش' }
           ]}
         />
       )
@@ -71,13 +157,13 @@ export default function SecondSection() {
       children: (
         <Items
           items={[
-            { icon: <MdOutlineEditNote />, name: 'تعریف شعبه ' },
-            { icon: <PiChartLineUp />, name: 'مدیریت قراردادها' },
-            { icon: <IoSettingsOutline />, name: 'افزرایش سرعت و کارآمدی' },
-            { icon: <SlOrganization />, name: 'داشبرد حرفه ای ' },
-            { icon: <HiOutlineUserGroup />, name: 'مدیریت مشتریان' },
-            { icon: <LuUserPen />, name: 'مدیریت مشاورین ' },
-            { icon: <PiBooksLight />, name: 'دسته بندی فایل ها ' }
+            { icon: <FcVip />, name: 'ایجاد حساب کاری ' },
+            { icon: <FcSearch />, name: 'جستجوی حرفه ای' },
+            { icon: <FcPlus />, name: 'ثبت رایگان آگهی' },
+            { icon: <FcVoicePresentation />, name: 'ارسال نظر و بازخورد ' },
+            { icon: <FcElectroDevices />, name: 'رزو سریع' },
+            { icon: <FcHome />, name: 'درخواست ملک ' },
+            { icon: <FcOrgUnit />, name: 'درخواست کارشناسی ملک ' }
           ]}
         />
       )
@@ -87,13 +173,12 @@ export default function SecondSection() {
       children: (
         <Items
           items={[
-            { icon: <MdOutlineEditNote />, name: 'تعریف شعبه ' },
-            { icon: <PiChartLineUp />, name: 'مدیریت قراردادها' },
-            { icon: <IoSettingsOutline />, name: 'افزرایش سرعت و کارآمدی' },
-            { icon: <SlOrganization />, name: 'داشبرد حرفه ای ' },
-            { icon: <HiOutlineUserGroup />, name: 'مدیریت مشتریان' },
-            { icon: <LuUserPen />, name: 'مدیریت مشاورین ' },
-            { icon: <PiBooksLight />, name: 'دسته بندی فایل ها ' }
+            { icon: <FcMoneyTransfer />, name: ' پرداخت آنی  ' },
+            { icon: <FcOvertime />, name: ' مدیریت رزرو ها' },
+            { icon: <FcSalesPerformance />, name: 'کسب درآمد' },
+            { icon: <FcEditImage />, name: 'صفحه اختصاصی ' },
+            { icon: <FcStatistics />, name: ' گزارش گیری ' },
+            { icon: <FcCurrencyExchange />, name: ' قیمت گذاری داینمامیک ' }
           ]}
         />
       )
@@ -103,13 +188,11 @@ export default function SecondSection() {
       children: (
         <Items
           items={[
-            { icon: <MdOutlineEditNote />, name: 'تعریف شعبه ' },
-            { icon: <PiChartLineUp />, name: 'مدیریت قراردادها' },
-            { icon: <IoSettingsOutline />, name: 'افزرایش سرعت و کارآمدی' },
-            { icon: <SlOrganization />, name: 'داشبرد حرفه ای ' },
-            { icon: <HiOutlineUserGroup />, name: 'مدیریت مشتریان' },
-            { icon: <LuUserPen />, name: 'مدیریت مشاورین ' },
-            { icon: <PiBooksLight />, name: 'دسته بندی فایل ها ' }
+            { icon: <FcCurrencyExchange />, name: 'کسب درامد ' },
+            { icon: <FcAddressBook />, name: 'صفحه اختصاصی' },
+            { icon: <FcMoneyTransfer />, name: 'کد تخفیف' },
+            { icon: <FcWikipedia />, name: 'مدیریت و انشار محتوا ' },
+            { icon: <FcFaq />, name: 'دریافت نظرات و بازخوردها' }
           ]}
         />
       )

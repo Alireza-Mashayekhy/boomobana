@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         primary: {
           1: '#EA5A25',
-          2: '#126736'
+          2: '#126736',
+          3: '#FF0000'
         },
         secondary: {
           1: '#000',
@@ -34,6 +35,9 @@ module.exports = {
           21: '#F2F2F2',
           22: '#fff'
         }
+      },
+      boxShadow: {
+        main: 'inset 1px 2px 2px 0PX #37A093'
       }
     }
   },

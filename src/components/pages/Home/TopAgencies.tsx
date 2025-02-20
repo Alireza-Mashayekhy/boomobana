@@ -30,7 +30,7 @@ const TopAgencies = () => {
         }}>
         {agencies.map((agency, index) => {
           return (
-            <SwiperSlide key={`agency-${index}`} className='w-full max-w-48'>
+            <SwiperSlide key={`agency-${index}`} className='w-full max-w-36'>
               <TopAgencyCard
                 name='آژانس املاک  رویا'
                 image='/images/Home/agency.png'

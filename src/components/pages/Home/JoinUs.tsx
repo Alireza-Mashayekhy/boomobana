@@ -11,7 +11,7 @@ const JoinUs = () => {
           alt='join us'
           width={300}
           height={300}
-          className='relative bottom-20'
+          className='relative bottom-20 w-[300px] min-w-[300px]'
         />
         <div className='p-12 pr-0 flex flex-col gap-5 items-end justify-between'>
           <h3 className='text-3xl text-secondary-22 font-bold w-full'>
@@ -22,7 +22,7 @@ const JoinUs = () => {
             هزاران خریدار واقعی معرفی کنید و سریع‌تر از همیشه معامله کنید. فرصت را از دست ندهید، همین امروز
             شروع کنید! 🏡💼
           </p>
-          <Button label='توضحیات بیشت ر  ' customClasses='px-5' />
+          <Button label='توضحیات بیشتر ' customClasses='!py-4 !px-5 !bg-primary-3' labelClasses='!text-sm' />
         </div>
       </div>
     </div>

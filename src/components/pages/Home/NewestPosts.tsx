@@ -8,7 +8,23 @@ import Title from '@/components/atoms/Title/indes';
 
 const Cards = () => {
   return (
-    <div className='grid grid-cols-3 gap-10 mt-7'>
+    <div className='grid grid-cols-4 gap-5 mt-7'>
+      <AdvCard
+        name='اجاره واحد های نوساز در فردیس کرج'
+        image='/images/homeBanner.jpg'
+        type='رهن اجاره'
+        size={5000}
+        rooms={4}
+        address='البرز-فردیس-کوچه تهرانسر...'
+        rent={10000000}
+        mortgage={200000000}
+        agency={{
+          image: '/images/homeBanner.jpg',
+          adviserImage: '/images/homeBanner.jpg',
+          name: 'آژانس آکو',
+          adviserName: 'مبینا دانه واش'
+        }}
+      />{' '}
       <AdvCard
         name='اجاره واحد های نوساز در فردیس کرج'
         image='/images/homeBanner.jpg'

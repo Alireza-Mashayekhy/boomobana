@@ -27,7 +27,7 @@ const Categories = () => {
         }}>
         {agencies.map((agency, index) => {
           return (
-            <SwiperSlide key={`category-${index}`} className='w-full max-w-40 pt-2 pb-7 '>
+            <SwiperSlide key={`category-${index}`} className='w-full max-w-36 pt-2 pb-7 '>
               <div className='flex bg-secondary-21 flex-col gap-2 py-4 px-3 rounded-2xl shadow-md cursor-pointer hover:shadow-lg transition-all'>
                 <Image
                   src='/images/Home/category.png'

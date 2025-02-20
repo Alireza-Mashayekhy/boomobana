@@ -27,12 +27,10 @@ export default function RootLayout({
       <link rel='canonical' href='https://boomobana.com/' />
       <body>
         <PrimeReactProvider>
-          <div className='flex justify-center'>
-            <div className='w-full max-w-[1200px] relative'>
-              <Nav />
-              <div>{children}</div>
-              <Footer />
-            </div>
+          <div className='w-full relative'>
+            <Nav />
+            <div>{children}</div>
+            <Footer />
           </div>
         </PrimeReactProvider>
       </body>

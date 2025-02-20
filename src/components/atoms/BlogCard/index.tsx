@@ -30,12 +30,12 @@ const BlogCard = (props: PropsTypes) => {
         <h5 className='absolute w-full bottom-0 left-0 p-2 bg-secondary-3/70 text-secondary-22 text-xs'>
           {props.name}
         </h5>
-        <div className='absolute top-3 right-3 rounded-lg text-white bg-secondary-1/50 text-sm px-5 py-2'>
+        <div className='absolute top-3 right-3 rounded-lg text-white text-xs bg-secondary-1/50 px-5 py-2'>
           {props.type}
         </div>
       </div>
       <div className='flex flex-col gap-4 px-2 text-secondary-1'>
-        <p className='text-sm text-secondary-1'>{props.description}</p>
+        <p className='text-xs text-secondary-1'>{props.description}</p>
         <Divider
           pt={{
             root: { className: 'border-secondary-10 m-0 p-0 border' }
@@ -47,19 +47,19 @@ const BlogCard = (props: PropsTypes) => {
               image={props.writerImage}
               shape='circle'
               pt={{
-                root: { className: 'w-10 h-10 relative' },
+                root: { className: 'w-7  h-7  relative' },
                 image: { className: 'w-full h-full object-cover' }
               }}
             />
-            <div className='text-sm'>{props.writer}</div>
+            <div className='text-xs'>{props.writer}</div>
           </div>
           <div className='flex gap-5'>
-            <div className='flex flex-col gap-1 items-center'>
-              <IoIosChatboxes className='text-xl text-secondary-8 ' />
+            <div className='flex flex-col gap-1 items-center text-xs'>
+              <IoIosChatboxes className='text-lg text-secondary-8 ' />
               {props.comments}
             </div>
-            <div className='flex flex-col gap-1 items-center'>
-              <FaStar className='text-xl text-primary-1' />
+            <div className='flex flex-col gap-1 items-center text-xs'>
+              <FaStar className='text-lg text-primary-1' />
               {props.star}
             </div>
           </div>

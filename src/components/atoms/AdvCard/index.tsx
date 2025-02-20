@@ -50,29 +50,29 @@ const AdvCard = (props: PropsTypes) => {
         </div>
       </div>
       <div className='flex flex-col gap-4 px-2 text-secondary-1'>
-        <div className='flex flex-wrap gap-2.5 justify-between'>
-          <div className='flex items-center gap-2'>
-            <FaHome className='text-xl' />
+        <div className='flex flex-wrap gap-1.5 justify-between'>
+          <div className='flex items-center gap-1 text-xs'>
+            <FaHome className='text-lg' />
             {props.type}
           </div>
-          <div className='flex items-center gap-2'>
-            <RiCustomSize className='text-xl' />
+          <div className='flex items-center gap-1 text-xs'>
+            <RiCustomSize className='text-lg' />
             {props.size.toLocaleString()} متر
           </div>
-          <div className='flex items-center gap-2'>
-            <FaBed className='text-xl' />
+          <div className='flex items-center gap-1 text-xs'>
+            <FaBed className='text-lg' />
             {props.rooms} خواب
           </div>
         </div>
-        <div className='flex items-center gap-2'>
-          <ImLocation2 className='text-xl' />
+        <div className='flex items-center gap-2 text-xs'>
+          <ImLocation2 className='text-lg' />
           {props.address}
         </div>
         <div className='flex items-center gap-2'>
-          <TbHomeDollar className='text-2xl' />
+          <TbHomeDollar className='text-xl' />
           <div>
             {props.mortgage && (
-              <div className='flex items-center gap-1'>
+              <div className='flex items-center gap-1 text-xs'>
                 رهن:{' '}
                 <span className='text-primary-1 font-bold'>
                   {(props.mortgage / 1000000).toLocaleString()} میلیون تومان
@@ -80,7 +80,7 @@ const AdvCard = (props: PropsTypes) => {
               </div>
             )}
             {props.rent && (
-              <div className='flex items-center gap-1'>
+              <div className='flex items-center gap-1 text-xs'>
                 اجاره:{' '}
                 <span className='text-primary-1 font-bold'>
                   {(props.rent / 1000000).toLocaleString()} میلیون تومان
@@ -103,28 +103,28 @@ const AdvCard = (props: PropsTypes) => {
                 image={props.agency.image}
                 shape='circle'
                 pt={{
-                  root: { className: 'w-14 h-14 relative' },
+                  root: { className: 'w-10 h-10 relative' },
                   image: { className: 'w-full h-full object-cover' }
                 }}
               />
-              <div className='text-sm'>{props.agency.name}</div>
+              <div className='text-xs'>{props.agency.name}</div>
             </div>
-            <div className='flex items-center gap-4 -translate-y-5 -translate-x-7'>
+            <div className='flex items-center gap-4 -translate-y-3 -translate-x-5'>
               <Avatar
                 image={props.agency.adviserImage}
                 shape='circle'
                 pt={{
-                  root: { className: 'w-10 h-10 border-2 border-secondary-22' },
+                  root: { className: 'w-6 h-6 border-2 border-secondary-22' },
                   image: { className: 'w-full h-full object-cover' }
                 }}
               />
-              <div className='text-sm'>{props.agency.adviserName}</div>
+              <div className='text-xs'>{props.agency.adviserName}</div>
             </div>
           </div>
           <div className='mt-2'>
-            <button className='flex items-center gap-3 py-2 px-3 bg-primary-2 rounded-lg text-white'>
+            <button className='flex items-center shadow-main rounded-[10px] gap-3 p-2 bg-primary-2 text-white text-xs'>
               <div>مشاوره</div>
-              <MdPhoneForwarded />
+              <MdPhoneForwarded className='text-sm' />
             </button>
           </div>
         </div>

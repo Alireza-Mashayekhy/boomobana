@@ -1,5 +1,4 @@
 import Approach from '@/components/pages/Home/Approach';
-import Banner from '@/components/pages/Home/Banner';
 import Blogs from '@/components/pages/Home/blogs';
 import Categories from '@/components/pages/Home/Categories';
 import FreeAdv from '@/components/pages/Home/FreeAdv';
@@ -13,7 +12,6 @@ import TopAgencies from '@/components/pages/Home/TopAgencies';
 export default function Home() {
   return (
     <div>
-      <Banner />
       <SecondSection />
       <LovelyCities />
       <TopAgencies />
