@@ -45,11 +45,17 @@ const LovelyCities = () => {
   ];
 
   return (
-    <div className='p-12'>
+    <div className='px-5 py-8 md:p-12'>
       <Title title='شهرهای محبوب و پربازدید' />
       <Swiper
-        slidesPerView={4}
-        spaceBetween={14}
+        breakpoints={{
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 14
+          }
+        }}
+        slidesPerView={2}
+        spaceBetween={10}
         loop
         className='mySwiper px-12'
         modules={[Autoplay]}

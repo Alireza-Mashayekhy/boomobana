@@ -8,7 +8,7 @@ import Title from '@/components/atoms/Title/indes';
 
 const Cards = () => {
   return (
-    <div className='grid grid-cols-4 gap-5 mt-7'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-7'>
       <AdvCard
         name='اجاره واحد های نوساز در فردیس کرج'
         image='/images/homeBanner.jpg'
@@ -98,7 +98,7 @@ const NewestPosts = () => {
     }
   ];
   return (
-    <div className='p-12 pt-20'>
+    <div className='px-5 py-8 md:p-12 md:pt-20'>
       <Title
         title='جدید ترین آگهی ها'
         description='بهترین گزینه متناسب با نیاز و سلیقه شما ، تنها با چند کلیک در دسترس شماست'

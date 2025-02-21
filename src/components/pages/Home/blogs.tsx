@@ -5,12 +5,12 @@ import Title from '@/components/atoms/Title/indes';
 
 const Blogs = () => {
   return (
-    <div className='p-12 pt-5'>
+    <div className='px-5 py-8 md:p-12 pt-5'>
       <Title
         title='دانش‌نامه بوم و بنا'
         description='با مقالات تخصصی بوم و بنا، دنیای املاک و اقامتگاه‌ها را حرفه‌ای‌تر بشناسید!  '
       />
-      <div className='grid grid-cols-4 gap-5 mt-7'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 mt-7'>
         <BlogCard
           image='/images/homeBanner.jpg'
           writerImage='/images/homeBanner.jpg'

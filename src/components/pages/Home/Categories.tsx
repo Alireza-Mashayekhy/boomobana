@@ -12,7 +12,7 @@ const Categories = () => {
   const agencies = [...Array.from({ length: 20 })];
 
   return (
-    <div className='p-12'>
+    <div className='px-5 py-8 md:p-12'>
       <Title title='دسته بندی اقامتگاه ها ' />
       <Swiper
         slidesPerView='auto'
@@ -27,8 +27,8 @@ const Categories = () => {
         }}>
         {agencies.map((agency, index) => {
           return (
-            <SwiperSlide key={`category-${index}`} className='w-full max-w-36 pt-2 pb-7 '>
-              <div className='flex bg-secondary-21 flex-col gap-2 py-4 px-3 rounded-2xl shadow-md cursor-pointer hover:shadow-lg transition-all'>
+            <SwiperSlide key={`category-${index}`} className='w-full max-w-28 md:max-w-36 pt-2 pb-7 '>
+              <div className='flex bg-secondary-21 flex-col gap-2 py-4 px-3 rounded-xl md:rounded-2xl shadow-md cursor-pointer hover:shadow-lg transition-all'>
                 <Image
                   src='/images/Home/category.png'
                   alt={`category-${index}`}
@@ -37,7 +37,7 @@ const Categories = () => {
                   width={300}
                   height={200}
                 />
-                <h3 className='text-center text-xl'>بوم گردی </h3>
+                <h3 className='text-center md:text-xl'>بوم گردی </h3>
               </div>
             </SwiperSlide>
           );

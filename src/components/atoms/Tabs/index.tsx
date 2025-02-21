@@ -27,7 +27,7 @@ const Tabs = ({ tabs, onChange, activeIndex, navClass }: AccordionTypes) => {
           pt={{
             headerAction: (options: TabPanelPassThroughMethodOptions) => ({
               className: classNames(
-                'transition-colors bg-transparent duration-300 min-w-[100px] justify-center ',
+                'transition-colors bg-transparent p-2 md:p-5 duration-300 justify-center ',
                 {
                   'text-black': activeIndex !== options.context?.index,
                   'text-primary-1': activeIndex === options.context?.index
@@ -35,7 +35,7 @@ const Tabs = ({ tabs, onChange, activeIndex, navClass }: AccordionTypes) => {
               )
             }),
             header: (options: TabPanelPassThroughMethodOptions) => ({
-              className: classNames(' border-primary-1 transition-all', {
+              className: classNames(' border-primary-1 text-[10px]  md:text-base transition-all', {
                 'border-b-0': activeIndex !== options.context?.index,
                 'border-b-2': activeIndex === options.context?.index
               })

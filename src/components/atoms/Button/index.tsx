@@ -50,10 +50,10 @@ const Button: React.FC<CustomProps> = ({
       disabled={buttonIsDisabled}
       pt={{
         root: {
-          className: `bg-primary-3 rounded-[10px] px-10 py-5 flex items-center justify-center gap-3 outline-none shadow-main transition-all ${roundedClasses} ${outlinedClasses} ${customClasses} `
+          className: `bg-primary-3 rounded md:rounded-[10px] px-5 py-3 sm:px-10 sm:py-5 flex items-center justify-center gap-3 outline-none shadow-main transition-all ${roundedClasses} ${outlinedClasses} ${customClasses} `
         },
         label: {
-          className: `text-[16px] font-regular leading-[5px] ${labelClasses} ${
+          className: `text-xs md:text-base font-regular leading-[5px] ${labelClasses} ${
             outlined ? 'text-primary-1' : 'text-secondary-22'
           }`
         }
@@ -61,7 +61,7 @@ const Button: React.FC<CustomProps> = ({
       {...rest}>
       {label && (
         <div
-          className={`text-[16px] font-regular leading-[5px] ${labelClasses} ${
+          className={`text-xs md:text-base font-regular leading-[5px] ${labelClasses} ${
             outlined ? 'text-primary-1' : 'text-secondary-22'
           }`}>
           {type === 'submit' && isSubmitting ? <Loader /> : label}

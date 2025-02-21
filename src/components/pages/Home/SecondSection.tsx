@@ -38,15 +38,15 @@ import Title from '@/components/atoms/Title/indes';
 const Items = ({ items }: { items: { name: string; icon: React.ReactElement }[] }) => {
   if (items.length === 7) {
     return (
-      <div className='flex justify-center pt-10'>
+      <div className='flex justify-center pt-5 md:pt-10'>
         <div className='flex flex-col items-center gap-y-5 justify-center py-5 px-10'>
           <div className='grid grid-cols-4 gap-10'>
             {items.slice(0, 4).map((item, index) => {
               return (
                 <div
                   key={`item-${index}`}
-                  className='text-lg text-secondary-1 flex flex-col items-center gap-2'>
-                  <div className='text-3xl'>{item.icon}</div>
+                  className='text-sm md:text-lg text-secondary-1 flex flex-col items-center gap-2 text-center'>
+                  <div className='text-xl md:text-3xl'>{item.icon}</div>
                   {item.name}
                 </div>
               );
@@ -57,8 +57,8 @@ const Items = ({ items }: { items: { name: string; icon: React.ReactElement }[] 
               return (
                 <div
                   key={`item-${index}`}
-                  className='text-lg text-secondary-1 flex flex-col items-center gap-2'>
-                  <div className='text-3xl'>{item.icon}</div>
+                  className='text-sm md:text-lg text-secondary-1 flex flex-col items-center gap-2 text-center'>
+                  <div className='text-xl md:text-3xl'>{item.icon}</div>
                   {item.name}
                 </div>
               );
@@ -69,14 +69,14 @@ const Items = ({ items }: { items: { name: string; icon: React.ReactElement }[] 
     );
   } else if (items.length === 6) {
     return (
-      <div className='flex justify-center pt-10'>
+      <div className='flex justify-center pt-5 md:pt-10'>
         <div className='grid grid-cols-3 gap-x-10 gap-y-5'>
           {items.map((item, index) => {
             return (
               <div
                 key={`item-${index}`}
-                className='text-lg text-secondary-1 flex flex-col items-center gap-2'>
-                <div className='text-3xl'>{item.icon}</div>
+                className='text-sm md:text-lg text-secondary-1 flex flex-col items-center gap-2 text-center'>
+                <div className='text-xl md:text-3xl'>{item.icon}</div>
                 {item.name}
               </div>
             );
@@ -86,15 +86,15 @@ const Items = ({ items }: { items: { name: string; icon: React.ReactElement }[] 
     );
   } else if (items.length === 5) {
     return (
-      <div className='flex justify-center pt-10'>
+      <div className='flex justify-center pt-5 md:pt-10'>
         <div className='flex flex-col items-center gap-y-5 justify-center py-5 px-10'>
           <div className='grid grid-cols-3 gap-10'>
             {items.slice(0, 3).map((item, index) => {
               return (
                 <div
                   key={`item-${index}`}
-                  className='text-lg text-secondary-1 flex flex-col items-center gap-2'>
-                  <div className='text-3xl'>{item.icon}</div>
+                  className='text-sm md:text-lg text-secondary-1 flex flex-col items-center gap-2 text-center'>
+                  <div className='text-xl md:text-3xl'>{item.icon}</div>
                   {item.name}
                 </div>
               );
@@ -105,8 +105,8 @@ const Items = ({ items }: { items: { name: string; icon: React.ReactElement }[] 
               return (
                 <div
                   key={`item-${index}`}
-                  className='text-lg text-secondary-1 flex flex-col items-center gap-2'>
-                  <div className='text-3xl'>{item.icon}</div>
+                  className='text-sm md:text-lg text-secondary-1 flex flex-col items-center gap-2 text-center'>
+                  <div className='text-xl md:text-3xl'>{item.icon}</div>
                   {item.name}
                 </div>
               );
@@ -200,9 +200,9 @@ export default function SecondSection() {
   ];
 
   return (
-    <div className='p-12'>
+    <div className='px-5 py-8 md:p-12'>
       <Title title='سرویس های بوم و بنا' />
-      <Tabs navClass='gap-20' tabs={tabItems} activeIndex={value} onChange={(index) => setValue(index)} />
+      <Tabs navClass='lg:gap-20' tabs={tabItems} activeIndex={value} onChange={(index) => setValue(index)} />
     </div>
   );
 }

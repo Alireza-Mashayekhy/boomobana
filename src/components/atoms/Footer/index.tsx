@@ -14,7 +14,7 @@ import Button from '../Button';
 
 const Footer = () => {
   return (
-    <div className='bg-[url("/images/footer.png")] bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center'>
+    <div className='bg-[url("/images/footer.png")] bg-no-repeat bg-cover bg-center hidden lg:flex flex-col items-center justify-center'>
       <div className='px-12 py-10  flex justify-between gap-5 w-full max-w-[1200px]'>
         <div className='w-2/6'>
           <div className='flex gap-7'>

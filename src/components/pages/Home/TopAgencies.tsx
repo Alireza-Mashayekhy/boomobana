@@ -12,7 +12,7 @@ const TopAgencies = () => {
   const agencies = [...Array.from({ length: 20 })];
 
   return (
-    <div className='p-12'>
+    <div className='px-5 py-8 md:p-12'>
       <Title
         title='آژانس های املاک برتر'
         description='برترین آژانس های املاک بر اساس تجربه و نظرات کاربران'
