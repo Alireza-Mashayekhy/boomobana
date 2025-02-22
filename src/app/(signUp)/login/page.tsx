@@ -13,7 +13,7 @@ const SignupSchema = Yup.object().shape({
   password: Yup.string().required('این فیلد اجباری است').min(8, 'حداقل طول رمز باید 8 کاراکتر باشد')
 });
 
-export default function Home() {
+export default function Login() {
   return (
     <Formik
       initialValues={{ phone: '', password: '' }}
@@ -21,7 +21,7 @@ export default function Home() {
       validationSchema={SignupSchema}>
       {({ errors, touched, isValid, dirty, isSubmitting }) => (
         <Form className='flex flex-col items-center justify-between h-full gap-8'>
-          <h1 className='text-xl'>ورود به پنل کاربری </h1>
+          <h1 className='text-lg sm:text-xl'>ورود به پنل کاربری </h1>
           <div className='w-full flex flex-col gap-5'>
             <div>
               <Field
@@ -67,7 +67,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className='flex justify-between w-full gap-5 mt-5 text-2xl text-black'>
+          <div className='flex justify-between w-full gap-5 mt-5 text-xl sm:text-2xl text-black'>
             <Link href='/'>
               <BsInstagram />
             </Link>

@@ -18,15 +18,15 @@ const SignupSchema = Yup.object().shape({
   lastName: Yup.string().required('این فیلد اجباری است')
 });
 
-export default function Home() {
+export default function SignUp() {
   return (
     <Formik
       initialValues={{ phone: '', password: '', confirmPassword: '', firstName: '', lastName: '' }}
       onSubmit={(values) => console.log(values)}
       validationSchema={SignupSchema}>
       {({ errors, touched, isValid, dirty, isSubmitting }) => (
-        <Form className='flex flex-col items-center justify-between h-full gap-8'>
-          <h1 className='text-xl'>عضویت در بوم و بنا</h1>
+        <Form className='flex flex-col items-center justify-between h-full gap-4 sm:gap-8'>
+          <h1 className='text-lg sm:text-xl'>عضویت در بوم و بنا</h1>
           <div className='w-full flex flex-col gap-5'>
             <div>
               <Field
@@ -34,7 +34,7 @@ export default function Home() {
                 placeholder='شماره تلفن همراه'
                 className={`w-full !bg-transparent ${
                   errors.phone ? 'border-red-500 border-2' : 'border-secondary-1 border'
-                } rounded-lg px-5 py-2 text-sm focus:outline-primary-2`}
+                } rounded-lg px-5 py-2 text-xs sm:text-sm focus:outline-primary-2`}
               />
               {errors.phone && touched.phone && (
                 <div className='text-[10px] text-red-500 mt-1 px-5'>{errors.phone}</div>
@@ -47,7 +47,7 @@ export default function Home() {
                 placeholder='رمز عبور'
                 className={`w-full !bg-transparent ${
                   errors.password ? 'border-red-500 border-2' : 'border-secondary-1 border'
-                } rounded-lg px-5 py-2 text-sm focus:outline-primary-2`}
+                } rounded-lg px-5 py-2 text-xs sm:text-sm focus:outline-primary-2`}
               />
               {errors.password && touched.password && (
                 <div className='text-[10px] text-red-500 mt-1 px-5'>{errors.password}</div>
@@ -60,7 +60,7 @@ export default function Home() {
                 placeholder='تکرار رمز عبور'
                 className={`w-full !bg-transparent ${
                   errors.confirmPassword ? 'border-red-500 border-2' : 'border-secondary-1 border'
-                } rounded-lg px-5 py-2 text-sm focus:outline-primary-2`}
+                } rounded-lg px-5 py-2 text-xs sm:text-sm focus:outline-primary-2`}
               />
               {errors.confirmPassword && touched.confirmPassword && (
                 <div className='text-[10px] text-red-500 mt-1 px-5'>{errors.confirmPassword}</div>
@@ -73,7 +73,7 @@ export default function Home() {
                 placeholder='نام'
                 className={`w-full !bg-transparent ${
                   errors.firstName ? 'border-red-500 border-2' : 'border-secondary-1 border'
-                } rounded-lg px-5 py-2 text-sm focus:outline-primary-2`}
+                } rounded-lg px-5 py-2 text-xs sm:text-sm focus:outline-primary-2`}
               />
               {errors.firstName && touched.firstName && (
                 <div className='text-[10px] text-red-500 mt-1 px-5'>{errors.firstName}</div>
@@ -86,7 +86,7 @@ export default function Home() {
                 placeholder='نام خانوادگی'
                 className={`w-full !bg-transparent ${
                   errors.lastName ? 'border-red-500 border-2' : 'border-secondary-1 border'
-                } rounded-lg px-5 py-2 text-sm focus:outline-primary-2`}
+                } rounded-lg px-5 py-2 text-xs sm:text-sm focus:outline-primary-2`}
               />
               {errors.lastName && touched.lastName && (
                 <div className='text-[10px] text-red-500 mt-1 px-5'>{errors.lastName}</div>
@@ -108,7 +108,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className='flex justify-between w-full gap-5 mt-5 text-2xl text-black'>
+          <div className='flex justify-between w-full gap-5 py-5 text-xl sm:text-2xl text-black'>
             <Link href='/'>
               <BsInstagram />
             </Link>
