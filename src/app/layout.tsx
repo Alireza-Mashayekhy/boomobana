@@ -3,9 +3,6 @@ import '@/styles/fonts.css';
 
 import type { Metadata } from 'next';
 
-import { BottomNav } from '@/components/atoms/BottomNav';
-import Footer from '@/components/atoms/Footer';
-import { Nav } from '@/components/atoms/Nav';
 import PrimeReactProvider from '@/providers/PrimeReactProvider';
 
 export const metadata: Metadata = {
@@ -27,14 +24,7 @@ export default function RootLayout({
     <html lang='en'>
       <link rel='canonical' href='https://boomobana.com/' />
       <body className='overflow-x-hidden'>
-        <PrimeReactProvider>
-          <div className='w-full relative pb-10 md:pb-0'>
-            <Nav />
-            <div>{children}</div>
-            <Footer />
-            <BottomNav />
-          </div>
-        </PrimeReactProvider>
+        <PrimeReactProvider>{children}</PrimeReactProvider>
       </body>
     </html>
   );
