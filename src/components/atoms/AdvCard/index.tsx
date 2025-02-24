@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { Avatar } from 'primereact/avatar';
 import { Divider } from 'primereact/divider';
@@ -10,6 +12,7 @@ import { RiCustomSize } from 'react-icons/ri';
 import { TbHomeDollar } from 'react-icons/tb';
 
 interface PropsTypes {
+  listFormat?: boolean;
   image: string;
   name: string;
   type: string;
@@ -30,7 +33,10 @@ interface PropsTypes {
 const AdvCard = (props: PropsTypes) => {
   const [saved, setSaved] = useState(false);
   return (
-    <div className='bg-secondary-22 shadow-md rounded-2xl p-2 flex flex-col gap-4'>
+    <div
+      className={`bg-secondary-22 shadow-md rounded-2xl p-2 flex ${
+        props.listFormat ? 'flex-row' : 'flex-col'
+      } gap-4`}>
       <div className='relative overflow-hidden rounded-xl aspect-[1.5]'>
         <Image
           src={props.image}
@@ -49,7 +55,7 @@ const AdvCard = (props: PropsTypes) => {
           {saved ? <IoMdBookmark className='text-xl' /> : <FaRegBookmark />}
         </div>
       </div>
-      <div className='flex flex-col gap-4 px-2 text-secondary-1'>
+      <div className='w-full flex flex-col gap-4 px-2 text-secondary-1'>
         <div className='flex flex-wrap gap-1.5 justify-between'>
           <div className='flex items-center gap-1 text-xs'>
             <FaHome className='text-lg' />
