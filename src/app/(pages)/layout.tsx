@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <div className='w-full relative'>
       <Nav />
-      <div>{children}</div>
+      <div className='relative'>{children}</div>
       <Footer />
       <BottomNav />
     </div>

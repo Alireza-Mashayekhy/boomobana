@@ -35,7 +35,7 @@ const AdvCard = (props: PropsTypes) => {
   return (
     <div
       className={`bg-secondary-22 shadow-md rounded-2xl p-2 flex ${
-        props.listFormat ? 'flex-row' : 'flex-col'
+        props.listFormat ? 'flex-col sm:flex-row' : 'flex-col'
       } gap-4`}>
       <div className='relative overflow-hidden rounded-xl aspect-[1.5]'>
         <Image

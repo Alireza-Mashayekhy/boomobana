@@ -5,7 +5,7 @@ import { MdNotificationsActive } from 'react-icons/md';
 
 export const BottomNav = () => {
   return (
-    <div className='fixed bottom-0 left-0 z-40 w-full bg-secondary-1/70 backdrop-blur-lg md:hidden flex justify-between items-center py-2 px-5 shadow-xl'>
+    <div className='fixed bottom-0 left-0 z-[40] w-full bg-secondary-1/70 backdrop-blur-lg md:hidden flex justify-between items-center py-2 px-5 shadow-xl'>
       <Link
         href='/'
         className='aspect-square blogIcon rounded-full text-white transition-colors w-10 h-10 flex items-center justify-center'>

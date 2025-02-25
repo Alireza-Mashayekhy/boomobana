@@ -48,7 +48,7 @@ export const Advs = ({ listView }: { listView: boolean }) => {
 
   return (
     <div className='flex items-start gap-4 relative'>
-      <div className='sticky top-10 flex flex-col gap-2'>
+      <div className='sticky top-10 sm:flex flex-col gap-2 hidden'>
         <div className='rounded-2xl bg-red-500 h-[200px] w-[150px] flex items-center justify-center'>
           تبلیغات
         </div>
@@ -66,10 +66,13 @@ export const Advs = ({ listView }: { listView: boolean }) => {
               Loading ...
             </div>
           }>
-          <div className={` ${listView ? 'flex flex-col w-full' : 'grid grid-cols-3'} gap-4`}>
+          <div
+            className={` ${
+              listView ? 'flex flex-col w-full' : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+            } gap-4`}>
             {allItems.map((data, index) => {
               return data.itemType === 'adv' ? (
-                <div key={data.name + index} className='col-span-1'>
+                <div key={data.name + index} className='lg:col-span-1'>
                   <AdvCard
                     listFormat={listView}
                     name={data.name}
@@ -86,7 +89,7 @@ export const Advs = ({ listView }: { listView: boolean }) => {
               ) : (
                 <div
                   key={data.name + index}
-                  className='col-span-3 py-10 bg-secondary-9 rounded-xl flex items-center justify-center'>
+                  className='md:col-span-2 lg:col-span-3 py-10 bg-secondary-9 rounded-xl flex items-center justify-center'>
                   تبلیغات
                 </div>
               );
