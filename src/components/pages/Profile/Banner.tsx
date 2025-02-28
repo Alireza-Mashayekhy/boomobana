@@ -13,24 +13,24 @@ export const Banner = () => {
         height={900}
         loading='lazy'
       />
-      <div className='flex absolute bottom-0 left-11 translate-y-1/2 gap-6 px-5 py-3 rounded-lg bg-secondary-21 shadow-lg'>
+      <div className='flex text-xl sm:text-2xl absolute bottom-0 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-11 translate-y-1/2 gap-6 px-5 py-3 rounded-lg bg-secondary-21 shadow-lg'>
         <Link href='/'>
-          <BsInstagram size={24} />
+          <BsInstagram />
         </Link>
         <Link href='/'>
-          <BsTwitter size={24} />
+          <BsTwitter />
         </Link>
         <Link href='/'>
-          <BsYoutube size={24} />
+          <BsYoutube />
         </Link>
         <Link href='/'>
-          <BsTelegram size={24} />
+          <BsTelegram />
         </Link>
         <Link href='/'>
-          <BsLinkedin size={24} />
+          <BsLinkedin />
         </Link>
         <Link href='/'>
-          <BsWhatsapp size={24} />
+          <BsWhatsapp />
         </Link>
       </div>
     </div>

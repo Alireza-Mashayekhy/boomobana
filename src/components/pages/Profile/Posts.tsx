@@ -16,7 +16,7 @@ export const Posts = () => {
 
   return (
     <div>
-      <div className='relative flex justify-center mb-10'>
+      <div className='relative flex justify-center mb-5 sm:mb-10'>
         <Image
           className='w-full absolute left-0 top-1/2 -translate-y-1/2'
           src='/images/Line.png'
@@ -24,10 +24,10 @@ export const Posts = () => {
           width={1700}
           height={2}
         />
-        <div className='flex items-center gap-7 bg-secondary-21 py-4 px-8 rounded-lg relative'>
+        <div className='flex items-center gap-5 sm:gap-7 bg-secondary-21 py-3 px-6 sm:py-4 sm:px-8 rounded-lg relative'>
           <div
             onClick={() => setSelectedType(0)}
-            className={`flex items-center gap-2 text-lg font-bold transition-all cursor-pointer ${
+            className={`flex items-center gap-2 text-sm sm:text-lg font-bold transition-all cursor-pointer ${
               selectedType === 0 ? 'text-primary-1' : ''
             }`}>
             <TbHomePlus size={24} /> املاک
@@ -35,7 +35,7 @@ export const Posts = () => {
           <Divider layout='vertical' pt={{ root: { className: 'border border-black m-0 h-5' } }} />
           <div
             onClick={() => setSelectedType(1)}
-            className={`flex items-center gap-2 text-lg font-bold transition-all cursor-pointer ${
+            className={`flex items-center gap-2 text-sm sm:text-lg font-bold transition-all cursor-pointer ${
               selectedType === 1 ? 'text-primary-1' : ''
             }`}>
             <FaBed size={24} /> اقامتگاه
@@ -43,14 +43,14 @@ export const Posts = () => {
           <Divider layout='vertical' pt={{ root: { className: 'border border-black m-0 h-5' } }} />
           <div
             onClick={() => setSelectedType(2)}
-            className={`flex items-center gap-2 text-lg font-bold transition-all cursor-pointer ${
+            className={`flex items-center gap-2 text-sm sm:text-lg font-bold transition-all cursor-pointer ${
               selectedType === 2 ? 'text-primary-1' : ''
             }`}>
-            <FaPenNib size={24} /> بلاگ
+            <FaPenNib size={20} /> بلاگ
           </div>
         </div>
       </div>
-      <div className='flex items-center gap-4 mb-20'>
+      <div className='flex items-center gap-4 mb-5 sm:mb-20'>
         <div
           className='cursor-pointer'
           onClick={() => {

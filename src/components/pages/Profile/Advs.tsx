@@ -57,7 +57,7 @@ export const Advs = ({ listView }: { listView: boolean }) => {
         }>
         <div
           className={` ${
-            listView ? 'flex flex-col w-full' : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+            listView ? 'flex flex-col w-full' : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
           } gap-4`}>
           {allItems.map((data, index) => {
             return (
