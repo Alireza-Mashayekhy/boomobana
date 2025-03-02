@@ -50,7 +50,7 @@ const Button: React.FC<CustomProps> = ({
       disabled={buttonIsDisabled}
       pt={{
         root: {
-          className: `bg-primary-3 rounded md:rounded-[10px] px-5 py-3 sm:px-10 sm:py-5 flex items-center justify-center gap-3 outline-none shadow-main transition-all ${roundedClasses} ${outlinedClasses} ${customClasses} `
+          className: `bg-primary-3 rounded md:rounded-[10px] px-4 py-2 sm:px-5 sm:py-3 flex items-center justify-center gap-3 outline-none shadow-main transition-all ${roundedClasses} ${outlinedClasses} ${customClasses} `
         },
         label: {
           className: `text-xs md:text-base font-regular ${labelClasses} ${

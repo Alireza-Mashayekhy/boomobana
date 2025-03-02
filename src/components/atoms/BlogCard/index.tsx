@@ -13,12 +13,15 @@ interface PropsTypes {
   writer: string;
   comments: number;
   star?: number;
+  listMode?: boolean;
 }
 
 const BlogCard = (props: PropsTypes) => {
   return (
-    <div className='bg-secondary-22 shadow-md rounded-2xl p-2 flex flex-col gap-4'>
-      <div className='relative overflow-hidden rounded-xl aspect-[1.5]'>
+    <div
+      className={`bg-secondary-22 shadow-md rounded-2xl p-2 flex ${props.listMode ? '' : 'flex-col'} gap-4`}>
+      <div
+        className={`relative overflow-hidden rounded-xl ${props.listMode ? 'aspect-square w-full' : 'aspect-[1.5]'}`}>
         <Image
           src={props.image}
           alt={props.name}
@@ -27,14 +30,17 @@ const BlogCard = (props: PropsTypes) => {
           width={300}
           height={200}
         />
-        <h5 className='absolute w-full bottom-0 left-0 p-2 bg-secondary-3/70 text-secondary-22 text-xs'>
-          {props.name}
-        </h5>
+        {!props.listMode && (
+          <h5 className='absolute w-full bottom-0 left-0 p-2 bg-secondary-3/70 text-secondary-22 text-xs'>
+            {props.name}
+          </h5>
+        )}
         <div className='absolute top-3 right-3 rounded-lg text-white text-xs bg-secondary-1/50 px-5 py-2'>
           {props.type}
         </div>
       </div>
-      <div className='flex flex-col gap-4 px-2 text-secondary-1'>
+      <div className={`flex flex-col ${props.listMode && 'justify-between'} gap-4 px-2 text-secondary-1`}>
+        {props.listMode && <h5 className='w-full text-secondary-1'>{props.name}</h5>}
         <p className='text-xs text-secondary-1'>{props.description}</p>
         <Divider
           pt={{
