@@ -1,3 +1,6 @@
+import tailwindScrollbar from 'tailwind-scrollbar';
+import tailwindScrollbarHide from 'tailwind-scrollbar-hide';
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -41,5 +44,5 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [tailwindScrollbarHide, tailwindScrollbar]
 };

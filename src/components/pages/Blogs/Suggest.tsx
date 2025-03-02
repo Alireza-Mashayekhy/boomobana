@@ -3,17 +3,17 @@ import Button from '@/components/atoms/Button';
 
 export const Suggest = () => {
   return (
-    <div className='flex gap-10'>
-      <div className='flex flex-col justify-between gap-4 w-1/3'>
-        <h2 className='text-3xl font-bold'>پیشنهاد سردبیر </h2>
-        <div className='flex flex-col items-center gap-2 text-xl'>
+    <div className='flex flex-col lg:flex-row gap-5 sm:gap-10'>
+      <div className='flex flex-col justify-between gap-4 w-full lg:w-1/3'>
+        <h2 className='text-xl sm:text-3xl font-bold'>پیشنهاد سردبیر </h2>
+        <div className='flex flex-col items-center gap-2 sm:text-xl'>
           منتخبی از مقالات برتر و خواندنی، انتخاب‌شده توسط سردبیر، برای کشف ایده‌ها و دیدگاه‌های جدید. 
         </div>
         <div className='flex justify-end'>
           <Button label='نمایش همه پست ها ' />
         </div>
       </div>
-      <div className='w-2/3'>
+      <div className='w-full lg:w-2/3'>
         <BlogCard
           listMode
           image='/images/homeBanner.jpg'

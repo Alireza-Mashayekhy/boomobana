@@ -11,8 +11,8 @@ const Newest = () => {
         title='تازه های بوم و بنا '
         description='"اقامت، معماری و سفر و: مثلثی از زیبایی ، پول و تفریح."'
       />
-      <div className='relative flex items-start gap-10'>
-        <div className='flex flex-col gap-10 w-2/3'>
+      <div className='relative flex flex-col lg:flex-row items-start gap-5 sm:gap-10'>
+        <div className='flex flex-col gap-5 sm:gap-10 w-full lg:w-2/3'>
           <BlogCard
             listMode
             image='/images/homeBanner.jpg'
@@ -50,8 +50,8 @@ const Newest = () => {
             تبلیغات
           </div>
         </div>
-        <div className='w-1/3 rounded-xl border border-secondary-15 sticky top-10 flex flex-col gap-5 p-6'>
-          <h4 className='text-3xl font-bold'>تاریخ و تمدن ایران</h4>
+        <div className='w-full lg:w-1/3 rounded-xl border border-secondary-15 sticky top-10 flex flex-col gap-5 p-6'>
+          <h4 className='text-xl sm:text-3xl font-bold'>تاریخ و تمدن ایران</h4>
           <Divider
             pt={{
               root: { className: 'border-secondary-15 !m-0 !p-0 border' }

@@ -8,7 +8,7 @@ import { Weekly } from '@/components/pages/Blogs/Weekly';
 
 export default function Blogs() {
   return (
-    <div className='flex flex-col gap-20 py-10'>
+    <div className='flex flex-col gap-10 sm:gap-20 py-10'>
       <Categories />
       <Banner />
       <Ads />

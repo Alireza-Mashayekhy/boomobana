@@ -19,7 +19,7 @@ interface PropsTypes {
 const BlogCard = (props: PropsTypes) => {
   return (
     <div
-      className={`bg-secondary-22 shadow-md rounded-2xl p-2 flex ${props.listMode ? '' : 'flex-col'} gap-4`}>
+      className={`bg-secondary-22 shadow-md rounded-2xl p-2 flex ${props.listMode ? 'flex-col sm:flex-row' : 'flex-col'} gap-4`}>
       <div
         className={`relative overflow-hidden rounded-xl ${props.listMode ? 'aspect-square w-full' : 'aspect-[1.5]'}`}>
         <Image
